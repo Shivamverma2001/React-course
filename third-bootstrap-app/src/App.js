@@ -33,16 +33,19 @@ function App() {
   };
 
   return (
-    <Router>
+    // <>
+     <Router>
       <Navbar title="Textutils" aboutText="About us" mode={currentMode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container">
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<TextArea showAlert={showAlert} title="Enter your details here" mode={currentMode} />} />
+           {/* <TextArea showAlert={showAlert} title="Enter your details here" mode={currentMode} /> */}
         </Routes>
       </div>
     </Router>
+    // </>
   );
 }
 
